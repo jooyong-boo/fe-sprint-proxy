@@ -1,24 +1,24 @@
 import React from "react";
 
-const CreateBook = ({ onChangeForm, handleSubmit }) => {
+const CreateTodo = ({ handleOnChangeTodoForm, handleTodoSubmit }) => {
     return (
         <div className="form-wrapper">
             <div className="form">
                 <form>
                     <div className="input-group">
-                        <label>book</label>
+                        <label>todo</label>
                         <input
                             type="text"
-                            onChange={(e) => onChangeForm(e)}
-                            name="book"
-                            placeholder="book"
+                            onChange={(e) => handleOnChangeTodoForm(e)}
+                            name="todo"
+                            placeholder="todo"
                         />
                     </div>
                     <div className="input-group">
                         <label>category</label>
                         <input
                             type="text"
-                            onChange={(e) => onChangeForm(e)}
+                            onChange={(e) => handleOnChangeTodoForm(e)}
                             name="category"
                             placeholder="category"
                         />
@@ -27,14 +27,14 @@ const CreateBook = ({ onChangeForm, handleSubmit }) => {
                         <label>author</label>
                         <input
                             type="text"
-                            onChange={(e) => onChangeForm(e)}
+                            onChange={(e) => handleOnChangeTodoForm(e)}
                             name="author"
                             placeholder="author"
                         />
                     </div>
                     <button
                         className="submit-button"
-                        onClick={() => handleSubmit()}
+                        onClick={() => handleTodoSubmit()}
                     >
                         Submit
                     </button>
@@ -44,4 +44,4 @@ const CreateBook = ({ onChangeForm, handleSubmit }) => {
     );
 };
 
-export default CreateBook;
+export default CreateTodo;
